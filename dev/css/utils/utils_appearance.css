@@ -1,0 +1,148 @@
+.mr-backgroundcolor {
+  background-color: var(
+    --background-color,
+    rgba(var(--red, 255), var(--green, 255), var(--blue, 255), var(--alpha, 1))
+  );
+}
+
+.mr-textcolor {
+  color: var(
+    --text-color,
+    rgba(var(--red, 0), var(--green, 0), var(--blue, 0), var(--alpha, 1))
+  );
+}
+
+.mr-unset {
+  all: unset;
+}
+
+.mr-nobullets {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mr-container {
+  max-width: var(--container, 75rem);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-left: var(--padding, 0.75rem);
+  padding-right: var(--padding, 0.75rem);
+}
+
+.mr-boxsize {
+  box-sizing: border-box;
+}
+.mr-boxsize *,
+.mr-boxsize ::after,
+.mr-boxsize ::before {
+  box-sizing: inherit;
+}
+
+.mr-coverimage,
+.mr-coverimage > img {
+  max-width: inherit;
+  /*width: 100%;
+  height: 100%;*/
+}
+
+.mr-cover,
+.mr-coverimage,
+.mr-coverimage > img {
+  object-fit: cover;
+  background-size: cover;
+}
+
+.mr-contain,
+.mr-containimage,
+.mr-containimage > img {
+  object-fit: contain;
+  background-size: contain;
+}
+
+.mr-nolines,
+.mr-nounderline {
+  text-decoration: none !important;
+}
+
+.mr-nolines,
+.mr-noborders {
+  border: 0;
+}
+
+.mr-borderradius {
+  border-radius: 1rem;
+  border-radius: var(--border-radius, 1rem);
+}
+
+.mr-borderradiustop,
+.mr-bordertopleftradius {
+  border-top-left-radius: 1rem;
+  border-top-left-radius: var(--border-radius, 1rem);
+}
+
+.mr-borderradiusright,
+.mr-bordertoprightradius {
+  border-top-right-radius: 1rem;
+  border-top-right-radius: var(--border-radius, 1rem);
+}
+
+.mr-borderradiusbottom,
+.mr-borderbottomrightradius {
+  border-bottom-right-radius: 1rem;
+  border-bottom-right-radius: var(--border-radius, 1rem);
+}
+
+.mr-borderradiusleft,
+.mr-borderbottomleftradius {
+  border-bottom-left-radius: 1rem;
+  border-bottom-left-radius: var(--border-radius, 1rem);
+}
+
+.mr-noborderradius {
+  border-radius: 0 !important;
+}
+
+.mr-noborderradiustop,
+.mr-nobordertopleftradius {
+  border-top-left-radius: 0 !important;
+}
+
+.mr-noborderradiusright,
+.mr-nobordertoprightradius {
+  border-top-right-radius: 0 !important;
+}
+
+.mr-noborderradiusbottom,
+.mr-noborderbottomrightradius {
+  border-bottom-right-radius: 0 !important;
+}
+
+.mr-noborderradiusleft,
+.mr-noborderbottomleftradius {
+  border-bottom-left-radius: 0 !important;
+}
+
+.mr-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  overflow: auto;
+  z-index: 20;
+}
+
+.mr-copy {
+  cursor: copy;
+  transition: all 0.3s ease-in-out;
+}
+.mr-copied {
+  opacity: 0.5;
+  -webkit-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
+}

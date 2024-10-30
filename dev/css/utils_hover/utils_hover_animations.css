@@ -1,0 +1,432 @@
+@keyframes mrHoverFadeOut {
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes mrHoverFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes mrHoverSlideInTop {
+  0% {
+    -webkit-transform: translateY(-100vh);
+    -ms-transform: translateY(-100vh);
+    transform: translateY(-100vh);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+}
+@keyframes mrHoverSlideOutTop {
+  0% {
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+  100% {
+    -webkit-transform: translateY(-100vh);
+    -ms-transform: translateY(-100vh);
+    transform: translateY(-100vh);
+  }
+}
+@keyframes mrHoverSlideInBottom {
+  0% {
+    -webkit-transform: translateY(100vh);
+    -ms-transform: translateY(100vh);
+    transform: translateY(100vh);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+}
+@keyframes mrHoverSlideOutBottom {
+  0% {
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+  100% {
+    -webkit-transform: translateY(100vh);
+    -ms-transform: translateY(100vh);
+    transform: translateY(100vh);
+  }
+}
+@keyframes mrHoverSlideOutLeft {
+  0% {
+    -webkit-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translateX(-100vw);
+    -ms-transform: translateX(-100vw);
+    transform: translateX(-100vw);
+  }
+}
+@keyframes mrHoverSlideInRight {
+  0% {
+    -webkit-transform: translateX(100vw);
+    -ms-transform: translateX(100vw);
+    transform: translateX(100vw);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+}
+@keyframes mrHoverSlideOutRight {
+  0% {
+    -webkit-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translateX(100vw);
+    -ms-transform: translateX(100vw);
+    transform: translateX(100vw);
+  }
+}
+@keyframes mrHoverSlideInLeft {
+  0% {
+    -webkit-transform: translateX(-100vw);
+    -ms-transform: translateX(-100vw);
+    transform: translateX(-100vw);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+}
+@keyframes mrHoverScaleOut {
+  0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+}
+@keyframes mrHoverScaleIn {
+  0% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes mrHoverZoomOut {
+  0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    transform: scale(0.5);
+    opacity: 0.5;
+  }
+}
+@keyframes mrHoverZoomIn {
+  0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 0.5;
+    transform-origin: center;
+  }
+  100% {
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: scale(1.5);
+    opacity: 1;
+    transform-origin: center;
+  }
+}
+.mr-hover-fade:hover,
+.mr-hover-fadeout:hover,
+.mr-hover-fade.mr-active:not(.mr-inactive),
+.mr-hover-fadein {
+  -webkit-animation: mrHoverFadeOut 0.5s forwards;
+  animation: mrHoverFadeOut 0.5s forwards;
+  -webkit-animation: mrHoverFadeOut var(--transition-duration, 0.5s) forwards;
+  animation: mrHoverFadeOut var(--transition-duration, 0.5s) forwards;
+}
+.mr-hover-fade.mr-active:not(.mr-inactive):hover,
+.mr-hover-fadein:hover,
+.mr-hover-fade,
+.mr-hover-fadeout {
+  -webkit-animation: mrHoverFadeIn 0.5s forwards;
+  animation: mrHoverFadeIn 0.5s forwards;
+  -webkit-animation: mrHoverFadeIn var(--transition-duration, 0.5s) forwards;
+  animation: mrHoverFadeIn var(--transition-duration, 0.5s) forwards;
+}
+
+.mr-hover-slide:not(p):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):hover,
+.mr-hover-slidebottom:not(p):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):hover,
+.mr-hover-slideright:not(p):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):hover,
+.mr-hover-slideleft:not(p):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):hover,
+.mr-hover-slidetop:not(p):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):hover,
+.mr-hover-slideintop:not(p):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):hover,
+.mr-hover-slideinbottom:not(p):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):hover,
+.mr-hover-slideouttop:not(p):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):hover,
+.mr-hover-slideoutbottom:not(p):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):hover,
+.mr-hover-slideinright:not(p):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):hover,
+.mr-hover-slideoutright:not(p):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):hover,
+.mr-hover-slideinleft:not(p):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):hover,
+.mr-hover-slideoutleft:not(p):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):hover {
+  overflow: hidden;
+}
+.mr-hover-slide:not(p):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):hover
+  > *,
+.mr-hover-slidebottom:not(p):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):hover
+  > *,
+.mr-hover-slideoutbottom:not(p):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):hover
+  > *,
+.mr-hover-slide:is(p, h1, h2, h3, h4, h5, h6):hover,
+.mr-hover-slidebottom:is(p, h1, h2, h3, h4, h5, h6):hover,
+.mr-hover-slideoutbottom:is(p, h1, h2, h3, h4, h5, h6):hover {
+  -webkit-animation: mrSlideOutBottom 0.5s forwards;
+  animation: mrSlideOutBottom 0.5s forwards;
+  -webkit-animation: mrSlideOutBottom var(--transition-duration, 0.5s) forwards;
+  animation: mrSlideOutBottom var(--transition-duration, 0.5s) forwards;
+}
+.mr-hover-slide.mr-hover-active:not(.mr-hover-inactive):not(p):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):hover
+  > *,
+.mr-hover-slidebottom.mr-hover-active:not(.mr-hover-inactive):not(p):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):hover
+  > *,
+.mr-hover-slideinbottom:not(p):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):hover
+  > *,
+.mr-hover-slide.mr-hover-active:not(.mr-hover-inactive):is(p, h1, h2, h3, h4, h5, h6):hover,
+.mr-hover-slidebottom.mr-hover-active:not(.mr-hover-inactive):is(p, h1, h2, h3, h4, h5, h6):hover,
+.mr-hover-slideinbottom:is(p, h1, h2, h3, h4, h5, h6):hover {
+  -webkit-animation: mrSlideInBottom 0.5s forwards;
+  animation: mrSlideInBottom 0.5s forwards;
+  -webkit-animation: mrSlideInBottom var(--transition-duration, 0.5s) forwards;
+  animation: mrSlideInBottom var(--transition-duration, 0.5s) forwards;
+}
+.mr-hover-transitiontop.mr-hover-slide:not(p):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):hover
+  > *,
+.mr-hover-slidetop:not(p):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):hover
+  > *,
+.mr-hover-slideouttop:not(p):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):hover
+  > *,
+.mr-hover-transitiontop.mr-hover-slide:is(p, h1, h2, h3, h4, h5, h6):hover,
+.mr-hover-slidetop:is(p, h1, h2, h3, h4, h5, h6):hover,
+.mr-hover-slideouttop:is(p, h1, h2, h3, h4, h5, h6):hover {
+  -webkit-animation: mrSlideOutTop 0.5s forwards;
+  animation: mrSlideOutTop 0.5s forwards;
+  -webkit-animation: mrSlideOutTop var(--transition-duration, 0.5s) forwards;
+  animation: mrSlideOutTop var(--transition-duration, 0.5s) forwards;
+}
+.mr-hover-transitiontop.mr-hover-slide.mr-hover-active:not(.mr-hover-inactive):not(p):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):hover
+  > *,
+.mr-hover-slidetop.mr-hover-active:not(.mr-hover-inactive):not(p):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):hover
+  > *,
+.mr-hover-slideintop:not(p):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):hover
+  > *,
+.mr-hover-transitiontop.mr-hover-slide.mr-hover-active:not(.mr-hover-inactive):is(p, h1, h2, h3, h4, h5, h6):hover,
+.mr-hover-slidetop.mr-hover-active:not(.mr-hover-inactive):is(p, h1, h2, h3, h4, h5, h6):hover,
+.mr-hover-slideintop:is(p, h1, h2, h3, h4, h5, h6):hover {
+  -webkit-animation: mrSlideInTop 0.5s forwards;
+  animation: mrSlideInTop 0.5s forwards;
+  -webkit-animation: mrSlideInTop var(--transition-duration, 0.5s) forwards;
+  animation: mrSlideInTop var(--transition-duration, 0.5s) forwards;
+}
+.mr-hover-transitionright.mr-hover-slide:not(p):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):hover
+  > *,
+.mr-hover-slideright:not(p):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):hover
+  > *,
+.mr-hover-slideoutright:not(p):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):hover
+  > *,
+.mr-hover-transitionright.mr-hover-slide:is(p, h1, h2, h3, h4, h5, h6):hover,
+.mr-hover-slideright:is(p, h1, h2, h3, h4, h5, h6):hover,
+.mr-hover-slideoutright:is(p, h1, h2, h3, h4, h5, h6):hover {
+  -webkit-animation: mrSlideOutRight 0.5s forwards;
+  animation: mrSlideOutRight 0.5s forwards;
+  -webkit-animation: mrSlideOutRight var(--transition-duration, 0.5s) forwards;
+  animation: mrSlideOutRight var(--transition-duration, 0.5s) forwards;
+}
+.mr-hover-transitionright.mr-hover-slide.mr-hover-active:not(.mr-hover-inactive):not(p):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):hover
+  > *,
+.mr-hover-slideright.mr-hover-active:not(.mr-hover-inactive):not(p):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):hover
+  > *,
+.mr-hover-slideinright:not(p):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):hover
+  > *,
+.mr-hover-transitionright.mr-hover-slide.mr-hover-active:not(.mr-hover-inactive):is(p, h1, h2, h3, h4, h5, h6):hover,
+.mr-hover-slideright.mr-hover-active:not(.mr-hover-inactive):is(p, h1, h2, h3, h4, h5, h6):hover,
+.mr-hover-slideinright:is(p, h1, h2, h3, h4, h5, h6):hover {
+  -webkit-animation: mrSlideInRight 0.5s forwards;
+  animation: mrSlideInRight 0.5s forwards;
+  -webkit-animation: mrSlideInRight var(--transition-duration, 0.5s) forwards;
+  animation: mrSlideInRight var(--transition-duration, 0.5s) forwards;
+}
+.mr-hover-transitionleft.mr-hover-slide:not(p):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):hover
+  > *,
+.mr-hover-slideleft:not(p):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):hover
+  > *,
+.mr-hover-slideoutleft:not(p):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):hover
+  > *,
+.mr-hover-transitionleft.mr-hover-slide:is(p, h1, h2, h3, h4, h5, h6):hover,
+.mr-hover-slideleft:is(p, h1, h2, h3, h4, h5, h6):hover,
+.mr-hover-slideoutleft:is(p, h1, h2, h3, h4, h5, h6):hover {
+  -webkit-animation: mrSlideOutLeft 0.5s forwards;
+  animation: mrSlideOutLeft 0.5s forwards;
+  -webkit-animation: mrSlideOutLeft var(--transition-duration, 0.5s) forwards;
+  animation: mrSlideOutLeft var(--transition-duration, 0.5s) forwards;
+}
+.mr-hover-transitionleft.mr-hover-slide.mr-hover-active:not(.mr-hover-inactive):not(p):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):hover
+  > *,
+.mr-hover-slideleft.mr-hover-active:not(.mr-hover-inactive):not(p):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):hover
+  > *,
+.mr-hover-slideinleft:not(p):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):hover
+  > *,
+.mr-hover-transitionleft.mr-hover-slide.mr-hover-active:not(.mr-hover-inactive):is(p, h1, h2, h3, h4, h5, h6):hover,
+.mr-hover-slideleft.mr-hover-active:not(.mr-hover-inactive):is(p, h1, h2, h3, h4, h5, h6):hover,
+.mr-hover-slideinleft:is(p, h1, h2, h3, h4, h5, h6):hover {
+  -webkit-animation: mrSlideInLeft 0.5s forwards;
+  animation: mrSlideInLeft 0.5s forwards;
+  -webkit-animation: mrSlideInLeft var(--transition-duration, 0.5s) forwards;
+  animation: mrSlideInLeft var(--transition-duration, 0.5s) forwards;
+}
+.mr-hover-scale:hover,
+.mr-hover-scaleleft:hover,
+.mr-hover-scaleright:hover,
+.mr-hover-scaleout:hover,
+.mr-hover-scaleoutleft:hover,
+.mr-hover-scaleoutright:hover,
+.mr-hover-scale.mr-active:not(.mr-inactive),
+.mr-hover-scaleleft.mr-active:not(.mr-inactive),
+.mr-hover-scaleright.mr-active:not(.mr-inactive),
+.mr-hover-scalein,
+.mr-hover-scaleinleft,
+.mr-hover-scaleinright {
+  transform-origin: center;
+  -webkit-animation: mrHoverScaleOut 0.5s forwards;
+  animation: mrHoverScaleOut 0.5s forwards;
+  -webkit-animation: mrHoverScaleOut var(--transition-duration, 0.5s) forwards;
+  animation: mrHoverScaleOut var(--transition-duration, 0.5s) forwards;
+}
+.mr-hover-scale.mr-active:not(.mr-inactive):hover,
+.mr-hover-scaleleft.mr-active:not(.mr-inactive):hover,
+.mr-hover-scaleright.mr-active:not(.mr-inactive):hover,
+.mr-hover-scalein:hover,
+.mr-hover-scaleinleft:hover,
+.mr-hover-scaleinright:hover,
+.mr-hover-scale,
+.mr-hover-scaleleft,
+.mr-hover-scaleright,
+.mr-hover-scaleout,
+.mr-hover-scaleoutleft,
+.mr-hover-scaleoutright {
+  -webkit-animation: mrHoverScaleIn 0.5s forwards;
+  animation: mrHoverScaleIn 0.5s forwards;
+  -webkit-animation: mrHoverScaleIn var(--transition-duration, 0.5s) forwards;
+  animation: mrHoverScaleIn var(--transition-duration, 0.5s) forwards;
+}
+.mr-hover-transitionleft.mr-hover-scale:not(.mr-active):hover,
+.mr-hover-scaleleft:not(.mr-active):hover,
+.mr-hover-scaleoutright:hover,
+.mr-hover-transitionright.mr-hover-scale.mr-active:hover,
+.mr-hover-scaleright.mr-active:hover,
+.mr-hover-scaleoutleft:hover {
+  transform-origin: right center;
+}
+.mr-hover-transitionleft.mr-hover-scale.mr-active:hover,
+.mr-hover-scaleleft.mr-active:hover,
+.mr-hover-scaleinright:hover,
+.mr-hover-transitionright.mr-hover-scale:not(.mr-active):hover,
+.mr-hover-scaleright:not(.mr-active):hover,
+.mr-hover-scaleoutleft:hover {
+  transform-origin: left center;
+}
+.mr-hover-zoom:hover,
+.mr-hover-zoomleft:hover,
+.mr-hover-zoomright:hover,
+.mr-hover-zoomout:hover,
+.mr-hover-zoomoutleft:hover,
+.mr-hover-zoomoutright:hover,
+.mr-hover-zoom.mr-active:not(.mr-inactive),
+.mr-hover-zoomleft.mr-active:not(.mr-inactive),
+.mr-hover-zoomright.mr-active:not(.mr-inactive),
+.mr-hover-zoomin,
+.mr-hover-zoominleft,
+.mr-hover-zoominright {
+  transform-origin: center;
+  -webkit-animation: mrHoverZoomOut 0.5s forwards;
+  animation: mrHoverZoomOut 0.5s forwards;
+  -webkit-animation: mrHoverZoomOut var(--transition-duration, 0.5s) forwards;
+  animation: mrHoverZoomOut var(--transition-duration, 0.5s) forwards;
+}
+.mr-hover-zoom.mr-active:not(.mr-inactive):hover,
+.mr-hover-zoomleft.mr-active:not(.mr-inactive):hover,
+.mr-hover-zoomright.mr-active:not(.mr-inactive):hover,
+.mr-hover-zoomin:hover,
+.mr-hover-zoominleft:hover,
+.mr-hover-zoominright:hover,
+.mr-hover-zoom,
+.mr-hover-zoomleft,
+.mr-hover-zoomright,
+.mr-hover-zoomout,
+.mr-hover-zoomoutleft,
+.mr-hover-zoomoutright {
+  -webkit-animation: mrHoverZoomIn 0.5s forwards;
+  animation: mrHoverZoomIn 0.5s forwards;
+  -webkit-animation: mrHoverZoomIn var(--transition-duration, 0.5s) forwards;
+  animation: mrHoverZoomIn var(--transition-duration, 0.5s) forwards;
+}
+.mr-hover-transitionleft.mr-hover-zoom.mr-active:hover,
+.mr-hover-zoomleft.mr-active:hover,
+.mr-hover-zoominleft:hover,
+.mr-hover-transitionleft.mr-hover-zoom:not(.mr-active):hover,
+.mr-hover-zoomleft:not(.mr-active):hover,
+.mr-hover-zoomoutleft:hover {
+  transform-origin: left center;
+}
+.mr-hover-transitionright.mr-hover-zoom.mr-active:hover,
+.mr-hover-zoomright.mr-active:hover,
+.mr-hover-zoomoutright:hover,
+.mr-hover-transitionright.mr-hover-zoom:not(.mr-active):hover,
+.mr-hover-zoomright:not(.mr-active):hover,
+.mr-hover-zoominright:hover {
+  transform-origin: right center;
+}
+.mr-hover-transition:hover,
+.mr-hover-ease:hover {
+  transition: all 0.5s ease;
+  transition: all var(--transition-duration, 0.5s) ease;
+}
+.mr-hover-easein:hover {
+  transition: all 0.5s ease-in;
+  transition: all var(--transition-duration, 0.5s) ease-in;
+}
+.mr-hover-easeout:hover {
+  transition: all 0.5s ease-out;
+  transition: all var(--transition-duration, 0.5s) ease-out;
+}
+.mr-hover-easeinout:hover {
+  transition: all 0.5s ease-in-out;
+  transition: all var(--transition-duration, 0.5s) ease-in-out;
+}
+.mr-hover-linear:hover {
+  transition: all 0.5s linear;
+  transition: all var(--transition-duration, 0.5s) linear;
+}

@@ -1,0 +1,36 @@
+.mr-desktop-flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+}
+.mr-desktop-transparent {
+  opacity: 0;
+}
+.mr-desktop-opaque {
+  opacity: 1;
+}
+.mr-desktop-semiopaque {
+  opacity: 0.5;
+  opacity: var(--opacity, 0.5);
+}
+.mr-desktop-show,
+.mr-desktop-block {
+  display: block !important;
+}
+.mr-desktop-show,
+.mr-desktop-visible {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+.mr-desktop-hide,
+.mr-desktop-none {
+  display: none !important;
+}
+.mr-desktop-hide,
+.mr-desktop-hidden {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}

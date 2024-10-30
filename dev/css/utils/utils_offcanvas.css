@@ -1,0 +1,213 @@
+/*(not used on breakpoints)*/
+.mr-offcanvas-container {
+  -webkit-animation: mrShow var(--transition-duration, 0.5s) forwards;
+  animation: mrShow var(--transition-duration, 0.5s) forwards;
+  position: relative;
+  z-index: 2;
+}
+.mr-offcanvas-content {
+  background-color: #fff;
+  background-color: var(
+    --offcanvas-background-color,
+    var(
+      --background-color,
+      var(--green, 255),
+      var(--blue, 255),
+      var(--alpha, 1)
+    )
+  );
+}
+.mr-offcanvas-toggle:not(:checked)
+  + .mr-offcanvas-container
+  .mr-offcanvas-content {
+  height: 100vh;
+}
+.mr-transitionleft
+  .mr-offcanvas-toggle:checked
+  + .mr-offcanvas-container
+  .mr-offcanvas-content,
+.mr-transitionright
+  .mr-offcanvas-toggle:checked
+  + .mr-offcanvas-container
+  .mr-offcanvas-content {
+  width: var(--offcanvas-size, 100%);
+}
+.mr-transitiontop
+  .mr-offcanvas-toggle:checked
+  + .mr-offcanvas-container
+  .mr-offcanvas-content,
+.mr-transitionbottom
+  .mr-offcanvas-toggle:checked
+  + .mr-offcanvas-container
+  .mr-offcanvas-content {
+  height: var(--offcanvas-size, 100%);
+}
+.mr-offcanvas-container,
+.mr-offcanvas-container p,
+.mr-offcanvas-container li,
+.mr-offcanvas-container a,
+.mr-offcanvas-container h1,
+.mr-offcanvas-container h2,
+.mr-offcanvas-container h3,
+.mr-offcanvas-container h4,
+.mr-offcanvas-container h5,
+.mr-offcanvas-container h6 {
+  color: #000;
+  color: var(
+    --offcanvas-text-color,
+    var(
+      --text-color,
+      rgba(var(--red, 0), var(--green, 0), var(--blue, 0), var(--alpha, 1))
+    )
+  );
+}
+.mr-offcanvas-toggle {
+  color: #000;
+  color: var(
+    --offcanvas-toggle-color,
+    var(
+      --text-color,
+      rgba(var(--red, 0), var(--green, 0), var(--blue, 0), var(--alpha, 1))
+    )
+  );
+}
+.mr-offcanvas-content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  z-index: 20;
+}
+.mr-offcanvas-toggle {
+  position: fixed;
+  width: 2.5em;
+  height: 1.5em;
+  cursor: pointer;
+  z-index: 21;
+}
+.mr-transitionright .mr-offcanvas-toggle {
+  right: 1.5rem;
+  right: var(--padding, 0.75rem);
+  top: 1.5rem;
+  top: var(--padding, 0.75rem);
+}
+.mr-transitionleft .mr-offcanvas-toggle {
+  left: 1.5rem;
+  left: var(--padding, 0.75rem);
+  top: 1.5rem;
+  top: var(--padding, 0.75rem);
+}
+.mr-transitiontop .mr-offcanvas-toggle {
+  left: calc(50% - 1.25em);
+  top: 1.5rem;
+  top: var(--padding, 0.75rem);
+}
+.mr-transitionbottom .mr-offcanvas-toggle {
+  left: calc(50% - 1.25em);
+  bottom: var(--padding, 0.75rem);
+}
+.mr-offcanvas-toggle {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  background: none;
+}
+.mr-offcanvas-toggle:before,
+.mr-offcanvas-toggle:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.mr-offcanvas-toggle:before {
+  height: 100%;
+  border: 0.2em solid;
+  border-left: 0;
+  border-right: 0;
+  border-radius: 0.2em;
+}
+.mr-offcanvas-toggle:after {
+  height: 0.85em;
+  border-bottom: 0.2em solid;
+}
+.mr-transitionright .mr-offcanvas-content {
+  margin-right: 0;
+  margin-left: auto;
+}
+.mr-transitionbottom .mr-offcanvas-content {
+  top: auto;
+}
+.mr-transitiontop
+  .mr-offcanvas-toggle:not(:checked)
+  + .mr-offcanvas-container
+  .mr-offcanvas-content {
+  -webkit-animation: mrSlideOutTop var(--transition-duration, 0.5s) forwards;
+  animation: mrSlideOutTop var(--transition-duration, 0.5s) forwards;
+}
+.mr-transitiontop
+  .mr-offcanvas-toggle:checked
+  + .mr-offcanvas-container
+  .mr-offcanvas-content {
+  -webkit-animation: mrSlideInTop var(--transition-duration, 0.5s) forwards;
+  animation: mrSlideInTop var(--transition-duration, 0.5s) forwards;
+}
+.mr-transitionright
+  .mr-offcanvas-toggle:not(:checked)
+  + .mr-offcanvas-container
+  .mr-offcanvas-content {
+  -webkit-animation: mrSlideOutRight var(--transition-duration, 0.5s) forwards;
+  animation: mrSlideOutRight var(--transition-duration, 0.5s) forwards;
+}
+.mr-transitionright
+  .mr-offcanvas-toggle:checked
+  + .mr-offcanvas-container
+  .mr-offcanvas-content {
+  -webkit-animation: mrSlideInRight var(--transition-duration, 0.5s) forwards;
+  animation: mrSlideInRight var(--transition-duration, 0.5s) forwards;
+}
+.mr-transitionbottom
+  .mr-offcanvas-toggle:not(:checked)
+  + .mr-offcanvas-container
+  .mr-offcanvas-content {
+  -webkit-animation: mrSlideOutBottom var(--transition-duration, 0.5s) forwards;
+  animation: mrSlideOutBottom var(--transition-duration, 0.5s) forwards;
+}
+.mr-transitionbottom
+  .mr-offcanvas-toggle:checked
+  + .mr-offcanvas-container
+  .mr-offcanvas-content {
+  -webkit-animation: mrSlideInBottom var(--transition-duration, 0.5s) forwards;
+  animation: mrSlideInBottom var(--transition-duration, 0.5s) forwards;
+}
+.mr-transitionleft
+  .mr-offcanvas-toggle:not(:checked)
+  + .mr-offcanvas-container
+  .mr-offcanvas-content {
+  -webkit-animation: mrSlideOutLeft var(--transition-duration, 0.5s) forwards;
+  animation: mrSlideOutLeft var(--transition-duration, 0.5s) forwards;
+}
+.mr-transitionleft
+  .mr-offcanvas-toggle:checked
+  + .mr-offcanvas-container
+  .mr-offcanvas-content {
+  -webkit-animation: mrSlideInLeft var(--transition-duration, 0.5s) forwards;
+  animation: mrSlideInLeft var(--transition-duration, 0.5s) forwards;
+}
+.admin-bar .mr-offcanvas-toggle:checked + .mr-offcanvas-container {
+  padding-top: 32px;
+}
+.admin-bar .mr-offcanvas-toggle:checked {
+  margin-top: 32px;
+}
+@media screen and (max-width: 782px) {
+  .admin-bar .mr-offcanvas-toggle:checked + .mr-offcanvas-container {
+    padding-top: 46px;
+  }
+  .admin-bar .mr-offcanvas-toggle:checked {
+    margin-top: 46px;
+  }
+}

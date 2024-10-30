@@ -1,0 +1,106 @@
+.mr-relative {
+  position: relative;
+}
+.mr-absolute {
+  position: absolute;
+}
+.mr-fixed {
+  position: fixed;
+  z-index: 1;
+}
+.mr-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 1;
+}
+.mr-aligntop {
+  vertical-align: top;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+.mr-alignbottom {
+  align-items: flex-end;
+  align-content: flex-end;
+  vertical-align: bottom;
+}
+.mr-top {
+  top: 0;
+  bottom: auto;
+}
+.mr-right {
+  right: 0;
+  left: auto;
+}
+.mr-middle {
+  align-items: center;
+  align-content: center;
+  vertical-align: middle;
+}
+.mr-left {
+  left: 0;
+  right: auto;
+}
+.mr-floatleft {
+  float: left;
+}
+.mr-floatright {
+  float: right;
+}
+.mr-center,
+.mr-marginauto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.mr-bottom {
+  bottom: 0;
+  top: auto;
+}
+.mr-baseline {
+  align-items: baseline;
+  vertical-align: baseline;
+}
+.mr-offsettop {
+  top: var(--offset, 0);
+}
+.mr-offsetright {
+  right: var(--offset, 0);
+}
+.mr-offsetleft {
+  left: var(--offset, 0);
+}
+.mr-offsetbottom {
+  bottom: var(--offset, 0);
+}
+.mr-offsetelementtop:not(.mr-offsetelementleft):not(.mr-offsetelementright) {
+  transform: translateY(calc(0 - var(--offset-element, 100%)));
+}
+.mr-offsetelementtop.mr-offsetelementleft {
+  transform: translate(
+    calc(0 - var(--offset-element, 100%)),
+    calc(0 - var(--offset-element, 100%))
+  );
+}
+.mr-offsetelementtop.mr-offsetelementright {
+  transform: translate(
+    var(--offset-element, 100%),
+    calc(0 - var(--offset-element, 100%))
+  );
+}
+.mr-offsetelementright:not(.mr-offsetelementtop):not(.mr-offsetelementbottom) {
+  transform: translateX(var(--offset-element, 100%));
+}
+.mr-offsetelementbottom:not(.mr-offsetelementleft):not(.mr-offsetelementright) {
+  transform: translateY(var(--offset-element, 100%));
+}
+.mr-offsetelementbottom.mr-offsetelementleft {
+  transform: translate(calc(0 - var(--offset-element, 100%)), 100%);
+}
+.mr-offsetelementbottom.mr-offsetelementright {
+  transform: translate(
+    var(--offset-element, 100%),
+    var(--offset-element, 100%)
+  );
+}
+.mr-offsetelementleft:not(.mr-offsetelementtop):not(.mr-offsetelementbottom) {
+  transform: translateX(calc(0 - var(--offset-element, 100%)));
+}

@@ -1,0 +1,36 @@
+.mr-landscape-flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+}
+.mr-landscape-transparent {
+  opacity: 0;
+}
+.mr-landscape-opaque {
+  opacity: 1;
+}
+.mr-landscape-semiopaque {
+  opacity: 0.5;
+  opacity: var(--opacity, 0.5);
+}
+.mr-landscape-show,
+.mr-landscape-block {
+  display: block !important;
+}
+.mr-landscape-show,
+.mr-landscape-visible {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+.mr-landscape-hide,
+.mr-landscape-none {
+  display: none !important;
+}
+.mr-landscape-hide,
+.mr-landscape-hidden {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}

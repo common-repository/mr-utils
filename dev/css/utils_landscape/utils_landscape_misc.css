@@ -1,0 +1,65 @@
+.mr-landscape-scroll {
+  overflow: auto;
+}
+.mr-landscape-noscroll {
+  overflow: hidden !important;
+}
+.mr-landscape-hidescroll::-webkit-scrollbar {
+  height: 0;
+  width: 0;
+}
+.mr-landscape-horizontalscroll,
+.mr-landscape-horizontalscrollcontent > * {
+  display: -webkit-inline-box !important;
+  flex-wrap: unset !important;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.mr-landscape-horizontalscroll img,
+.mr-landscape-horizontalscrollcontent > * img,
+.mr-landscape-horizontalscroll a,
+.mr-landscape-horizontalscrollcontent > * a {
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.mr-landscape-horizontalscroll > *,
+.mr-landscape-horizontalscrollcontent > * > * {
+  display: block;
+}
+.mr-landscape-drag,
+.mr-landscape-dragcontent > *,
+.mr-landscape-draganddrop:not([draggable="false"]) {
+  cursor: grab;
+}
+.mr-landscape-dragging:not([draggable="false"]),
+.mr-landscape-draggingcontent > * {
+  cursor: grabbing;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.mr-landscape-dragging a,
+.mr-landscape-draggingcontent a {
+  pointer-events: none;
+}
+@supports (-webkit-overflow-scrolling: touch) {
+  .mr-landscape-iosscroll,
+  .mr-landscape-scroll {
+    overflow-y: scroll !important;
+  }
+  .mr-landscape-horizontalscroll,
+  .mr-landscape-horizontalscrollcontent > * {
+    overflow-x: scroll !important;
+  }
+  .mr-landscape-iosscroll,
+  .mr-landscape-scroll,
+  .mr-landscape-horizontalscroll,
+  .mr-landscape-horizontalscrollcontent > * {
+    -webkit-overflow-scrolling: touch !important;
+  }
+}

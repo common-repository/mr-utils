@@ -1,0 +1,103 @@
+.mr-hover-backgroundcolor:hover {
+  background-color: var(
+    --background-color,
+    rgba(var(--red, 255), var(--green, 255), var(--blue, 255), var(--alpha, 1))
+  );
+}
+
+.mr-hover-textcolor:hover {
+  color: var(
+    --text-color,
+    rgba(var(--red, 0), var(--green, 0), var(--blue, 0), var(--alpha, 1))
+  );
+}
+
+.mr-hover-nobullets:hover {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mr-hover-coverimage:hover,
+.mr-hover-coverimage:hover > img {
+  max-width: inherit;
+  /*width: 100%;
+  height: 100%;*/
+}
+
+.mr-hover-cover:hover,
+.mr-hover-coverimage:hover,
+.mr-hover-coverimage:hover > img {
+  object-fit: cover;
+  background-size: cover;
+}
+
+.mr-hover-contain:hover,
+.mr-hover-containimage:hover,
+.mr-hover-containimage:hover > img {
+  object-fit: contain;
+  background-size: contain;
+}
+
+.mr-hover-nolines:hover,
+.mr-hover-nounderline:hover {
+  text-decoration: none !important;
+}
+
+.mr-hover-nolines:hover,
+.mr-hover-noborders:hover {
+  border: 0;
+}
+
+.mr-borderradius:hover {
+  border-radius: 1rem;
+  border-radius: var(--border-radius, 1rem);
+}
+
+.mr-borderradiustop:hover,
+.mr-bordertopleftradius:hover {
+  border-top-left-radius: 1rem;
+  border-top-left-radius: var(--border-radius, 1rem);
+}
+
+.mr-borderradiusright:hover,
+.mr-bordertoprightradius:hover {
+  border-top-right-radius: 1rem;
+  border-top-right-radius: var(--border-radius, 1rem);
+}
+
+.mr-borderradiusbottom:hover,
+.mr-borderbottomrightradius:hover {
+  border-bottom-right-radius: 1rem;
+  border-bottom-right-radius: var(--border-radius, 1rem);
+}
+
+.mr-borderradiusleft:hover,
+.mr-borderbottomleftradius:hover {
+  border-bottom-left-radius: 1rem;
+  border-bottom-left-radius: var(--border-radius, 1rem);
+}
+
+.mr-noborderradius:hover {
+  border-radius: 0 !important;
+}
+
+.mr-noborderradiustop:hover,
+.mr-nobordertopleftradius:hover {
+  border-top-left-radius: 0 !important;
+}
+
+.mr-noborderradiusright:hover,
+.mr-nobordertoprightradius:hover {
+  border-top-right-radius: 0 !important;
+}
+
+.mr-noborderradiusbottom:hover,
+.mr-noborderbottomrightradius:hover {
+  border-bottom-right-radius: 0 !important;
+}
+
+.mr-noborderradiusleft:hover,
+.mr-noborderbottomleftradius:hover {
+  border-bottom-left-radius: 0 !important;
+}
